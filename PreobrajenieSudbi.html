@@ -71,6 +71,10 @@
         .animate-gentle-bounce {
             animation: gentle-bounce 2.5s ease-in-out infinite;
         }
+        /* Scroll margin for centering the harmony package on mobile */
+        #harmony-package {
+            scroll-margin-top: 25vh;
+        }
     </style>
 </head>
 <body class="antialiased" x-data="{ scrolled: false }" @scroll.window="scrolled = (window.scrollY > window.innerHeight * 0.8)">
