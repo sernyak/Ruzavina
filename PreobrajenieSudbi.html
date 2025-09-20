@@ -57,6 +57,20 @@
         .aos-animate {
             opacity: 1;
         }
+        /* Animation for the scroll down arrow */
+        @keyframes gentle-bounce {
+          0%, 100% {
+            transform: translateY(0);
+            opacity: 0.8;
+          }
+          50% {
+            transform: translateY(8px);
+            opacity: 1;
+          }
+        }
+        .animate-gentle-bounce {
+            animation: gentle-bounce 2.5s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="antialiased" x-data="{ scrolled: false }" @scroll.window="scrolled = (window.scrollY > window.innerHeight * 0.8)">
@@ -84,17 +98,24 @@
     <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-gradient">
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071&auto-format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); opacity: 0.15;"></div>
         
-        <div class="relative z-10 p-6">
+        <div class="relative z-10 p-6 flex flex-col items-center">
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-wider" data-aos="fade-in" data-aos-delay="200">ПРЕОБРАЖЕНИЕ СУДЬБЫ</h1>
             <p class="mt-4 text-lg md:text-2xl text-amber-200 max-w-3xl mx-auto" data-aos="fade-in" data-aos-delay="400">Получите ключи к новой реальности и станьте архитектором своей жизни</p>
             <a href="#pricing" class="cta-button mt-10 inline-block bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-4 px-10 rounded-full text-lg" data-aos="fade-in" data-aos-delay="600">
                 Выбрать свой путь
             </a>
         </div>
+        
+        <!-- Scroll Down Arrow -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2" data-aos="fade-in" data-aos-delay="800">
+            <a href="#pain-points" aria-label="Прокрутить вниз">
+                <svg class="w-8 h-8 text-amber-200 animate-gentle-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+        </div>
     </section>
 
     <!-- PAIN POINTS SECTION -->
-    <section class="py-16 md:py-24 bg-[#100e23]" data-aos="fade-up">
+    <section id="pain-points" class="py-16 md:py-24 bg-[#100e23]" data-aos="fade-up">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-5xl font-semibold text-white">Узнаете себя?</h2>
             <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Если хотя бы один пункт о вас, вы в правильном месте.</p>
