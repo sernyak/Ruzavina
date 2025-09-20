@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,7 +88,12 @@
         >
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <h2 class="text-xl font-semibold text-white font-['Cormorant_Garamond'] hidden sm:block">Преображение Судьбы</h2>
-            <a href="#pricing" class="cta-button bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-2 px-6 rounded-full text-sm">
+            <!-- Desktop Button -->
+            <a href="#pricing" class="cta-button hidden sm:block bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-2 px-6 rounded-full text-sm">
+                Выбрать путь
+            </a>
+            <!-- Mobile Button -->
+            <a href="#harmony-package" class="cta-button sm:hidden bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-2 px-6 rounded-full text-sm">
                 Выбрать путь
             </a>
         </div>
@@ -101,7 +106,13 @@
         <div class="relative z-10 p-6 flex flex-col items-center">
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-wider" data-aos="fade-in" data-aos-delay="200">ПРЕОБРАЖЕНИЕ СУДЬБЫ</h1>
             <p class="mt-4 text-lg md:text-2xl text-amber-200 max-w-3xl mx-auto" data-aos="fade-in" data-aos-delay="400">Получите ключи к новой реальности и станьте архитектором своей жизни</p>
-            <a href="#pricing" class="cta-button mt-10 inline-block bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-4 px-10 rounded-full text-lg" data-aos="fade-in" data-aos-delay="600">
+            
+            <!-- Desktop Button -->
+            <a href="#pricing" class="cta-button mt-10 hidden sm:inline-block bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-4 px-10 rounded-full text-lg" data-aos="fade-in" data-aos-delay="600">
+                Выбрать свой путь
+            </a>
+            <!-- Mobile Button -->
+            <a href="#harmony-package" class="cta-button mt-10 inline-block sm:hidden bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-4 px-10 rounded-full text-lg" data-aos="fade-in" data-aos-delay="600">
                 Выбрать свой путь
             </a>
             
@@ -287,7 +298,7 @@
                 </div>
 
                 <!-- Package 2: Harmony (Most Popular) -->
-                <div class="glass-card p-8 rounded-2xl text-left border-4 border-amber-400 transform lg:scale-110 shadow-2xl shadow-amber-500/10" data-aos="fade-up" data-aos-delay="200">
+                <div id="harmony-package" class="glass-card p-8 rounded-2xl text-left border-4 border-amber-400 transform lg:scale-110 shadow-2xl shadow-amber-500/10" data-aos="fade-up" data-aos-delay="200">
                     <div class="text-center mb-4">
                         <span class="bg-amber-400 text-gray-900 text-sm font-bold px-4 py-1 rounded-full">САМЫЙ ПОПУЛЯРНЫЙ</span>
                     </div>
