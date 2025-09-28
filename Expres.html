@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экспресс-Диагностика | Узнайте корень вашей проблемы</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Animate On Scroll (AOS) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0a1a; /* Deep cosmic blue */
+            color: #e0e0e0;
+            overflow-x: hidden; /* Prevent horizontal scrollbar during animation */
+        }
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle, rgba(13,12,29,0.8) 0%, rgba(13,12,29,1) 70%);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 215, 77, 0.5);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 215, 77, 0.8);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* Custom class to prevent AOS from hiding elements on mobile before init */
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+        }
+        .aos-animate {
+            opacity: 1;
+        }
+        /* Animation for the scroll down arrow */
+        @keyframes gentle-bounce {
+          0%, 100% {
+            transform: translateY(0);
+            opacity: 0.8;
+          }
+          50% {
+            transform: translateY(8px);
+            opacity: 1;
+          }
+        }
+        .animate-gentle-bounce {
+            animation: gentle-bounce 2.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-gradient">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071&auto-format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); opacity: 0.15;"></div>
+        
+        <div class="relative z-10 p-6 flex flex-col items-center">
+            <p class="text-amber-300 tracking-widest" data-aos="fade-in" data-aos-delay="100">ВАШ ПЕРВЫЙ ШАГ К ЯСНОСТИ</p>
+            <h1 class="mt-2 text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-wider" data-aos="fade-in" data-aos-delay="200">Узнайте корень вашей проблемы за 10 минут</h1>
+            <p class="mt-4 text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto" data-aos="fade-in" data-aos-delay="400">Получите видео-разбор вашего вопроса по Матрице Судьбы и узнайте корень вашей проблемы.</p>
+            
+            <a href="#payment-link" class="cta-button mt-10 inline-block bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-4 px-10 rounded-full text-lg" data-aos="fade-in" data-aos-delay="600">
+                Получить диагностику за €9
+            </a>
+
+            <p class="mt-4 text-gray-400" data-aos="fade-in" data-aos-delay="700">🎥 Видео-ответ в течение 7 рабочих дней</p>
+            
+            <!-- Scroll Down Arrow -->
+            <a href="#problems" class="mt-16" aria-label="Прокрутить вниз" data-aos="fade-in" data-aos-delay="800">
+                <svg class="w-10 h-10 text-amber-200 animate-gentle-bounce" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- PAIN POINTS SECTION -->
+    <section id="problems" class="py-16 md:py-24 bg-[#100e23]" data-aos="fade-up">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-semibold text-white">Есть вопрос, который не дает покоя?</h2>
+            <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">Если хотя бы один из этих пунктов о вас — вы в правильном месте.</p>
+            
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+                <!-- Pain Point 1 -->
+                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                     <div class="text-rose-400 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white">Отношения зашли в тупик?</h3>
+                    <p class="mt-2 text-gray-400">Сложности в отношениях с партнером или в его поиске.</p>
+                </div>
+                <!-- Pain Point 2 -->
+                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                     <div class="text-green-400 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white">Финансовый потолок?</h3>
+                    <p class="mt-2 text-gray-400">Деньги приходят с трудом, и вы не видите причину.</p>
+                </div>
+                <!-- Pain Point 3 -->
+                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+                     <div class="text-purple-400 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L15 9l-2.447-1.224A1 1 0 0012 7.618V5.618a1 1 0 011.447-.894L19 9m-9 11l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L15 9l-2.447-1.224A1 1 0 0012 7.618V5.618a1 1 0 011.447-.894L19 9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white">Потеряли ориентир?</h3>
+                    <p class="mt-2 text-gray-400">Потеряли ориентир и сомневаетесь в своем пути.</p>
+                </div>
+                <!-- Pain Point 4 -->
+                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-blue-400 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white">"День сурка"?</h3>
+                    <p class="mt-2 text-gray-400">Ходите по кругу одних и тех же проблем.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="py-16 md:py-24" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-semibold text-white">Ваш компас в мире кармы: Экспресс-диагностика</h2>
+                <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">Быстрый и точный срез вашей ситуации. Диагностика подсветит корень проблемы через энергии вашей Матрицы Судьбы.</p>
+            </div>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Feature 1 -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="mx-auto w-20 h-20 flex items-center justify-center rounded-full bg-cyan-400/10 text-cyan-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mt-4">Персональный видео-ответ</h3>
+                    <p class="mt-1 text-gray-400">Личное видео (до 10 мин) с разбором ключевых точек вашей Матрицы.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="mx-auto w-20 h-20 flex items-center justify-center rounded-full bg-amber-400/10 text-amber-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mt-4">Анализ первопричины</h3>
+                    <p class="mt-1 text-gray-400">Понимание кармического узла, который создает проблему.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="mx-auto w-20 h-20 flex items-center justify-center rounded-full bg-purple-400/10 text-purple-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mt-4">Четкое направление</h3>
+                    <p class="mt-1 text-gray-400">Ясное направление для решения вашей ситуации.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="py-16 md:py-24 bg-[#100e23]" data-aos="fade-up">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-semibold text-white">Всего 3 простых шага к ответу</h2>
+            <div class="mt-12 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
+                <!-- Connector lines -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2">
+                    <svg width="100%" height="2" class="text-gray-700">
+                        <line x1="0" y1="1" x2="100%" y2="1" stroke="currentColor" stroke-width="2" stroke-dasharray="8 8"/>
+                    </svg>
+                </div>
+                <!-- Step 1 -->
+                <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-gray-800 text-amber-300 text-2xl font-bold border-2 border-gray-700">1</div>
+                    <h3 class="text-xl font-semibold text-white mt-4">Оплатите онлайн</h3>
+                    <p class="mt-1 text-gray-400">Оплатите диагностику (€9) через удобную и безопасную систему.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-gray-800 text-amber-300 text-2xl font-bold border-2 border-gray-700">2</div>
+                    <h3 class="text-xl font-semibold text-white mt-4">Опишите ваш вопрос</h3>
+                    <p class="mt-1 text-gray-400">Заполните анкету, описав свой запрос.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-gray-800 text-amber-300 text-2xl font-bold border-2 border-gray-700">3</div>
+                    <h3 class="text-xl font-semibold text-white mt-4">Получите видео-разбор</h3>
+                    <p class="mt-1 text-gray-400">Получите видео на email в течение 7 рабочих дней.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTHOR SECTION -->
+    <section class="py-16 md:py-24" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="w-full md:w-1/3 text-center">
+                    <!-- Expert's photo -->
+                    <img src="portrait.png" alt="Ольга Рузавина, кармолог и нумеролог" class="rounded-full w-48 h-48 md:w-64 md:h-64 mx-auto object-cover border-4 border-amber-300">
+                </div>
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-3xl md:text-5xl font-semibold text-white">Ваш проводник — Ольга Рузавина</h2>
+                    <p class="mt-6 text-lg text-gray-300 leading-relaxed">
+                        Опытный кармолог и нумеролог. Помогаю раскрыть потенциал и освободиться от оков прошлого. В этой диагностике я использую весь свой опыт, чтобы дать вам точное и полезное направление.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPSELL SECTION -->
+    <section class="py-16 md:py-24 bg-[#100e23]" data-aos="fade-up">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-semibold text-white">Что дальше? Ваш путь после диагностики</h2>
+            <div class="mt-8 glass-card rounded-2xl p-8 text-left flex items-start gap-6">
+                <div class="text-yellow-400 flex-shrink-0 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 3.01-1.742 3.01H4.42c-1.53 0-2.493-1.676-1.743-3.01l5.58-9.92zM10 13a1 1 0 110-2 1 1 0 010 2zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-white">Важно: Диагностика — это точный компас, а не "волшебная таблетка".</h3>
+                    <p class="mt-2 text-gray-400">Она покажет вам <span class="text-amber-300 font-semibold">направление</span> и <span class="text-amber-300 font-semibold">первопричину</span>, но не включает детальный план исцеления.</p>
+                </div>
+            </div>
+            
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Path 1 -->
+                <div class="glass-card p-6 rounded-2xl text-left" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold text-white">1. Самостоятельное движение</h3>
+                    <p class="mt-2 text-gray-400">Получив ясность, вы сможете двигаться дальше самостоятельно.</p>
+                </div>
+                <!-- Path 2 -->
+                <div class="glass-card p-6 rounded-2xl text-left" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold text-white">2. Глубокая трансформация</h3>
+                    <p class="mt-2 text-gray-400">Если готовы к глубокой работе — жду вас на курсе "Преображение Судьбы" за инструментами для исцеления.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <footer id="payment-link" class="py-16 md:py-24 text-center" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-semibold text-white">Готовы получить ответ, который изменит ваш взгляд на ситуацию?</h2>
+            <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Хватит ходить по кругу. Получите ясный ответ и ключ к решению вашей проблемы.</p>
+            
+            <div class="my-8" data-aos="fade-up" data-aos-delay="100">
+                <span class="text-5xl md:text-6xl font-bold text-white">Всего за €9</span>
+                <span class="text-2xl text-gray-500 line-through ml-2">€30</span>
+            </div>
+
+            <a href="#payment-link" class="cta-button mt-2 inline-block bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-4 px-10 rounded-full text-lg" data-aos="fade-up" data-aos-delay="200">
+                Да, хочу ясность! Получить диагностику
+            </a>
+            <p class="mt-8 text-gray-500">Остались вопросы? Напишите мне в <a href="https://t.me/karmolog_olga_ruzavina" target="_blank" class="text-amber-300 hover:underline">Telegram</a>.</p>
+        </div>
+    </footer>
+    
+    <!-- AOS Init Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, 
+        easing: 'ease-out-cubic', 
+        once: true,
+        offset: 50,
+      });
+    </script>
+</body>
+</html>
+
+
