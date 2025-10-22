@@ -71,10 +71,6 @@
         .animate-gentle-bounce {
             animation: gentle-bounce 2.5s ease-in-out infinite;
         }
-        /* Scroll margin for centering the harmony package on mobile */
-        #harmony-package {
-            scroll-margin-top: 25vh;
-        }
     </style>
 </head>
 <body class="antialiased" x-data="{ scrolled: false }" @scroll.window="scrolled = (window.scrollY > window.innerHeight * 0.8)">
@@ -298,7 +294,7 @@
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Групповая поддержка в чате</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Вебинары от специалистов</li>
                     </ul>
-                    <a href="https://t.me/karmolog_olga_ruzavina" target="_blank" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-colors">Начать очищение</a>
+                    <a href="https://t.me/energycoach_olga" target="_blank" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-colors">Начать очищение</a>
                 </div>
 
                 <!-- Package 2: Harmony (Most Popular) -->
@@ -315,7 +311,7 @@
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Глубокие медитации</li>
                         <li class="flex items-center font-bold text-amber-200"><svg class="w-5 h-5 text-amber-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Индивидуальная консультация</li>
                     </ul>
-                    <a href="https://t.me/karmolog_olga_ruzavina" target="_blank" class="cta-button mt-8 block w-full text-center bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-3 px-6 rounded-lg">Войти в гармонию</a>
+                    <a href="https://t.me/energycoach_olga" target="_blank" class="cta-button mt-8 block w-full text-center bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-3 px-6 rounded-lg">Войти в гармонию</a>
                 </div>
 
                 <!-- Package 3: VIP -->
@@ -329,7 +325,7 @@
                         <li class="flex items-center font-bold text-amber-200"><svg class="w-5 h-5 text-amber-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Доступ к личному ментору</li>
                         <li class="flex items-center font-bold text-amber-200"><svg class="w-5 h-5 text-amber-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Индивидуальные занятия</li>
                     </ul>
-                    <a href="https://t.me/karmolog_olga_ruzavina" target="_blank" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-colors">Получить Личное Наставничество</a>
+                    <a href="https://t.me/energycoach_olga" target="_blank" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-colors">Получить Личное Наставничество</a>
                 </div>
             </div>
         </div>
@@ -339,7 +335,8 @@
     <section class="py-16 md:py-24 bg-[#100e23]" data-aos="fade-up">
         <div class="container mx-auto px-6 max-w-3xl">
             <h2 class="text-3xl md:text-5xl font-semibold text-white text-center">Остались вопросы?</h2>
-            <div class="mt-10 space-y-4">
+            <!-- ==== FIX: Added x-data="{ open: null }" here ==== -->
+            <div class="mt-10 space-y-4" x-data="{ open: null }">
                 <!-- FAQ Item 1 -->
                 <div class="glass-card rounded-lg overflow-hidden">
                     <button @click="open = open === 1 ? null : 1" class="w-full text-left p-5 flex justify-between items-center">
@@ -379,15 +376,10 @@
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-5xl font-semibold text-white">Ваше преображение начинается сегодня</h2>
             <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Не откладывайте жизнь своей мечты на завтра. Сделайте первый шаг к гармонии и счастью прямо сейчас.</p>
-            <!-- Desktop Button -->
-            <a href="#pricing" class="cta-button mt-10 hidden sm:inline-block bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-4 px-10 rounded-full text-lg">
+            <a href="#pricing" class="cta-button mt-10 inline-block bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-4 px-10 rounded-full text-lg">
                 Присоединиться к курсу
             </a>
-            <!-- Mobile Button -->
-            <a href="#harmony-package" class="cta-button mt-10 inline-block sm:hidden bg-gradient-to-r from-yellow-500 to-amber-400 text-gray-900 font-bold py-4 px-10 rounded-full text-lg">
-                Присоединиться к курсу
-            </a>
-            <p class="mt-8 text-gray-500">Остались вопросы? Напишите мне в <a href="https://t.me/karmolog_olga_ruzavina" target="_blank" class="text-amber-300 hover:underline">Telegram</a>.</p>
+            <p class="mt-8 text-gray-500">Остались вопросы? Напишите мне в <a href="https://t.me/energycoach_olga" target="_blank" class="text-amber-300 hover:underline">Telegram</a>.</p>
         </div>
     </footer>
     
@@ -402,4 +394,3 @@
     </script>
 </body>
 </html>
-
